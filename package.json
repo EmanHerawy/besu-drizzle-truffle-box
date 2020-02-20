@@ -1,0 +1,32 @@
+{
+  "name": "@besu-io/drizzle-besu-box",
+  "version": "0.1.1",
+  "description": "Boilerplate to get up and running quickly with Drizzle & Truffle on a Hyperledger Besu chain.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.31",
+    "web3": "1.0.0-beta.37"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmanHerawy/-besu-io-drizzle-besu-box.git"
+  },
+  "keywords": [
+    "drizzle",
+    "truffle",
+    "besu"
+  ],
+  "author": "Eman Herawy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmanHerawy/-besu-io-drizzle-besu-box/issues"
+  },
+  "homepage": "https://github.com/EmanHerawy/-besu-io-drizzle-besu-box#readme"
+}
