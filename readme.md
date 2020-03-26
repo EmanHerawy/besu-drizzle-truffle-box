@@ -11,14 +11,14 @@ First ensure you are in a new and empty directory.
 1. Run the `unbox` command with `npx` and skip to step 3. This will install all necessary dependencies.
 
 ```
-npx truffle unbox besu-io/drizzle-besu-box
+npx truffle unbox EmanHerawy/besu-drizzle-truffle-box
 ```
 
 2. Alternatively, you can install Truffle globally and then run the `unbox` command.
 
 ```
 npm install -g truffle
-truffle unbox besu-io/drizzle-besu-box
+truffle unbox EmanHerawy/besu-drizzle-truffle-box
 ```
 
 3. Run the development console. This will instantiate a local chain for you to test that Truffle is working properly.
