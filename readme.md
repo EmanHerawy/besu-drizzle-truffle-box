@@ -6,75 +6,58 @@ This box gives you a boilerplate to get up and running quickly with Drizzle & Tr
 
 ## Installation
 
-First ensure you are in a new and empty directory.
+First ensure you are in a new and empty directory to install our box.
 
-1. Run the `unbox` command with `npx` and skip to step 3. This will install all necessary dependencies.
+1. Run the `unbox` command with `npx` and skip to step 3. This will install all necessary dependencies. Choose the installation method that works for you.
+   ```
+   # option 1
+   npx truffle unbox EmanHerawy/besu-drizzle-truffle-box
 
-```
-npx truffle unbox EmanHerawy/besu-drizzle-truffle-box
-```
+   # option 2
+   npm install -g truffle
+   truffle unbox EmanHerawy/besu-drizzle-truffle-box
+   ```
 
-2. Alternatively, you can install Truffle globally and then run the `unbox` command.
+1. Run the development console. This will instantiate a local chain and put you in a REPL where you can test that Truffle is working properly.
+   ```
+   truffle develop
+   ```
 
-```
-npm install -g truffle
-truffle unbox EmanHerawy/besu-drizzle-truffle-box
-```
+1. Ensure that you're able to compile, test, and migrate your contracts to your local chain.
+   ```
+   compile
+   test
+   migrate
+   ```
 
-3. Run the development console. This will instantiate a local chain for you to test that Truffle is working properly.
-
-```
-truffle develop
-```
-
-4. Ensure that you're able to both compile, test, and finally migrate your contracts to your local chain.
-
-```
-compile
-test
-migrate
-```
-
-5. If everything looks good, you can exit the Truffle console with `.exit`.
+1. If everything looks good, you can exit the Truffle console with `.exit`.
 
 ## Run  Hyperledger Besu
 
-1. Clone Besu Quickstart Source Code  `git clone https://github.com/PegaSysEng/besu-quickstart.git`.
+1. Clone Besu Quickstart Source Code  `git clone https://github.com/PegaSysEng/besu-quickstart.git`
 
-2. Build Docker Images and Start Services and Network `./run.sh`
+1. Build Docker Images and Start Services and Network `./run.sh`
 
-3. The `run.sh` script builds the images, and runs the containers.
+1. The `run.sh` script builds the images and runs the containers.
 
-4. When the process ends, it lists the running, followed by a list of the endpoints.
+1. When the process ends, it lists the running followed by a list of the endpoints. Note the JSON-RPC HTTP endpoint for later.
 
-
-5. Migrate your contracts to your Hyperledger Besu chain!
-
-```
-truffle migrate --network quickstartWallet
-```
+1. Migrate your contracts to your Hyperledger Besu chain!
+   ```
+   truffle migrate --network quickstartWallet
+   ```
 
 ## Connect MetaMask to your Hyperledger Besu Chain
 
 1. In the `Networks` switcher in MetaMask, choose `Custom RPC`.
 
-2. Find the `New Network` section, and click `Advanced Options`.
-3. Enter the JSON-RPC HTTP service endpoint displayed when you started the private network.
-## Start Your React App
+1. Find the `New Network` section, and click `Advanced Options`.
 
-1. Open the `/app` directory and start the development server.
-```
-export PORT=30001
-cd app && npm run start
-```
+1. Enter the JSON-RPC HTTP service endpoint displayed when you started the private network.
 
-2. The development server will open a browser at `http://localhost:30001` by default.
+## import Besu Accounts to MetaMask
 
-3. Attempt to change the `Stored Value` of `SimpleStorage` -- you should see the refresh icon until the transaction is confirmed, at which point the `Stored Value` of `SimpleStorage` should automatically update.
-
-## Creating a Transaction Using MetaMask
-
-Before sending transactions, you need to create an account or use one of the accounts below created during the genesis of this private test network.
+Before sending transactions, you need to create an account or use one of the accounts below which were created during the genesis of this private test network. Please note that with MetaMask 8 you will have to give permissions to these three accounts.
 
 - Account 1 (Miner Coinbase Account)
   - Address: 0xfe3b557e8fb62b89f4916b721be55ceb828dbd73
@@ -88,3 +71,16 @@ Before sending transactions, you need to create an account or use one of the acc
   - Address: 0xf17f52151EbEF6C7334FAD080c5704D77216b732
   - Private key : 0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f
   - Initial balance : 0x90000000000000000000000 (2785365088392105618523029504 in decimal
+
+## Start Your React App
+
+1. Open the `/app` directory and start the development server.
+   ```
+   export PORT=30001
+   cd app && npm run start
+   ```
+
+2. The development server will open a browser at `http://localhost:30001` by default.
+
+3. Attempt to change the `Stored Value` of `SimpleStorage` -- you should see the refresh icon until the transaction is confirmed, at which point the `Stored Value` of `SimpleStorage` should automatically update.
+
