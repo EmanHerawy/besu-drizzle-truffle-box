@@ -3,17 +3,7 @@
     "README.md",
     ".gitignore"
   ],
-  "besu-drizzle-truffle-box": {
-		"description": "Drizzle starter for Hyperledger Besu network",
-		"stars": 1,
-		"tags": [
-			"besu",
-			"community",
-			"docker",
-			"drizzle",
-			"hyperledger"
-		]
-	},
+
   "commands": {
     "Compile contracts": "truffle compile",
     "Migrate contracts": "truffle migrate",
